@@ -22,8 +22,6 @@ var _ = {
         }
      },
 
-        console.log(_contains(testArray, 22));
-
 
     first: function(array) {
         return array[0];
