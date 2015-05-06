@@ -7,11 +7,8 @@ var _ = {
         for (var i = 0; i < array.length; i++) {
         	sum += array[i];
         }
-            console.log(sum);
         return (sum / array.length);
     },
-
-        console.log(_.average(testArray));
 
 
     contains: function(array, number) {
@@ -22,6 +19,7 @@ var _ = {
             else{
             	return false;
             }
+        }
      },
 
         console.log(_contains(testArray, 22));
@@ -31,14 +29,10 @@ var _ = {
         return array[0];
     },
 
-        console.log(_.first(testArray));
-
 
     last: function(array) {
-         return array[array.length - 1];
+        return array[array.length - 1];
     },
-
-        console.log(_.last(testArray));
 
 
     max: function(array) {
@@ -51,7 +45,6 @@ var _ = {
         return max
     },
 
-        console.log(_.max(testArray));
 
 
     min: function(array) {
@@ -64,8 +57,6 @@ var _ = {
         return min
     },
 
-        console.log(_min.(testArray));
-
 
 	shuffle: function(array) {
         for (var i = 0; i < array.length; i++) {
@@ -74,12 +65,9 @@ var _ = {
             array[i] = array[rand];
             array[rand] = temp;
         }
-      return testArray;
+      	return testArray;
     }
 
-};
-
-console.log(_.shuffle(testArray));
           
 
 
@@ -92,24 +80,48 @@ console.log(_.shuffle(testArray));
 	indexOf:
 
 
-	pluck:
+	pluck: 
 
 
 
-//Part 2
+Part 2 */
 
 
-	each:
+	each: function(array, alert) {
+        for (var i = 0; i < array.length; i++) {
+        	alert(array[i]);
+        }
+    },
 
 
-	compact:
+	compact: function(array) {
+		var newArray = [];
+		for (var i = 0; i < array.length; i++) {
+			if (array[i] !== undefined) {
+				newArray.push(array[i]);
+			}
+		}
+		return newArray;
+	},
 
 
-	map:
+	map: function(array, givenFunk) {
+		var newArray = [];
+		for (var i = 0; i < array.length; i++) {
+			newArray.push(givenFunk(array[i]));
+		} 
+		return newArray
+	},
 
 
-	filter:
-*/
+	filter: function(array, givenFunk) {
+		var newArray = [];
+		for (var i = 0; i < array.length; i++) {
+			if (givenFunk(array[i]) === true) {
+				newArray.push(array[i]);
+			}
+		}
+		return newArray
+	},
 
-
-                };
+};
