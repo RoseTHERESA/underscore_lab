@@ -2,8 +2,8 @@ var testArray = [45, 76, 22, 99];
 
 var _ = {
 
-	average: function(array) {
-		var sum = 0;
+    average: function(array) {
+	var sum = 0;
         for (var i = 0; i < array.length; i++) {
         	sum += array[i];
         }
