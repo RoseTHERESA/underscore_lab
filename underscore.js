@@ -103,23 +103,25 @@ Part 2 */
 	},
 
 
-	map: function(array, givenFunc) {
+	map: function(array, func) {
+        if(!func){
+            return ("You need a function.")
+        }
 		var newArray = [];
 		for (var i = 0; i < array.length; i++) {
-			newArray.push(givenFunk(array[i]));
+			newArray.push(func(array[i]));
 		} 
 		return newArray
 	},
 
 
-	filter: function(array, givenFunc) {
+	filter: function(array, func) {
 		var newArray = [];
 		for (var i = 0; i < array.length; i++) {
-			if (givenFunk(array[i]) === true) {
+			if (func(array[i]) === true) {
 				newArray.push(array[i]);
 			}
 		}
 		return newArray
 	},
-
 };
