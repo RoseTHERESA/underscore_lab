@@ -103,7 +103,7 @@ Part 2 */
 	},
 
 
-	map: function(array, givenFunk) {
+	map: function(array, givenFunc) {
 		var newArray = [];
 		for (var i = 0; i < array.length; i++) {
 			newArray.push(givenFunk(array[i]));
@@ -112,7 +112,7 @@ Part 2 */
 	},
 
 
-	filter: function(array, givenFunk) {
+	filter: function(array, givenFunc) {
 		var newArray = [];
 		for (var i = 0; i < array.length; i++) {
 			if (givenFunk(array[i]) === true) {
