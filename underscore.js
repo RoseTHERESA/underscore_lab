@@ -44,7 +44,6 @@ var _ = {
     },
 
 
-
     min: function(array) {
         for (var i = 0; i < array.length; i++) {
             var min = 0;
@@ -56,15 +55,18 @@ var _ = {
     },
 
 
-	shuffle: function(array) {
+    shuffle: function(array) {
         for (var i = 0; i < array.length; i++) {
+            
             var rand = Math.floor(Math.random() * (array.length - 1));
             var temp = array[i];
             array[i] = array[rand];
             array[rand] = temp;
+                
+          return array;
         }
-      	return testArray;
-    }
+    },
+
 
           
 
